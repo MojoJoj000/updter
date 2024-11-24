@@ -1,6 +1,7 @@
 name: Dev Renewal Action
 on: 
   workflow_dispatch:
+
   schedule:
     - cron: "15 23 * * *"
     
@@ -10,4 +11,4 @@ jobs:
     steps:
       - name: Make API Request
         run: |
-          curl -X GET URL
+          curl -X GET https://developer.lge.com/secure/ResetDevModeSession.dev?sessionToken=44d62ed31ed1b04fb25abb420132bad7c668c50f781fa5ee2df4ccb2247362f2
